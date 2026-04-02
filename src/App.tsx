@@ -11,9 +11,23 @@ export function App() {
 
   const handleAddInput = (value : string) => {
     setList([ 
-          ...isList, 
-          { id: (isList.length + 1).toString(), complete: false, label: value}
-        ])
+        ...isList, 
+        { id: (isList.length + 1).toString(), complete: false, label: value}
+    ])
+  }
+
+  const handleRemoveButton = (id : string) => {
+    setList([
+        ...isList.filter(item => item.id !== id
+    )])
+  }
+
+  const handleCompleteButton = (id : string) => {
+    setList([
+       ...isList.map(item => ({ 
+       ...item, 
+       complete: item.id === id ? true : item.complete
+    }))])
   }
 
 
@@ -32,14 +46,9 @@ export function App() {
             label={ listItem.label }   
             complete={ listItem.complete }  
             
-            onComplete={() => setList([
-              ...isList.map(item => ({ 
-              ...item, 
-              complete: item.id === listItem.id ? true : item.complete
-            }))])}
+            onComplete={() => handleCompleteButton( listItem.id )}
 
-            onRemove={() => setList([
-              ...isList.filter(item => item.id !== listItem.id)])}
+            onRemove={() => handleRemoveButton( listItem.id )}
           />
           
 
