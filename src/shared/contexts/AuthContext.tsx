@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react"
+import React, { createContext, useCallback, useContext, useState } from "react"
 
 
 type AuthContextProps = {
@@ -13,28 +13,28 @@ const AuthContext = createContext({} as AuthContextProps)
 
 
 
-export function AuthProvider({ children }:React.PropsWithChildren) {
+export function AuthProvider({ children }: React.PropsWithChildren) {
 
     const [email, setEmail] = useState<string>()
     const [accessToken, setAccessToken] = useState<string>()
 
-    const logout = () => {
+    const logout = useCallback(() => {
         setEmail(undefined)
         setAccessToken(undefined)
-    }   
-    
-    const login = (email: string, password: string) => {
+    }, [])
+
+    const login = useCallback((email: string, password: string) => {
         console.log(email, password);
-        
+
 
         setEmail(email)
         setAccessToken(crypto.randomUUID())
-        
-    }
 
-    return(
+    }, [])
+
+    return (
         <AuthContext.Provider value={{ login, logout, email, accessToken }}>
-            { children }
+            {children}
         </AuthContext.Provider>
     )
 }
