@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Lista de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de curso desenvolvido com React para gerenciamento de tarefas pessoais.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Autenticação**: Tela de login para acesso à aplicação
+- **Lista de Tarefas**: 
+  - Adicionar novas tarefas
+  - Remover tarefas existentes
+  - Marcar tarefas como concluídas
+- **Navegação**: Página inicial (lista de tarefas), Sobre e Detalhe
 
-## React Compiler
+## Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19.2.4** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Superset tipado do JavaScript
+- **Vite 8.0.1** - Build tool e dev server
+- **React Router 7.14.0** - Gerenciamento de rotas
+- **Axios 1.14.0** - Cliente HTTP para requisições à API
 
-## Expanding the ESLint configuration
+## Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone o repositório
+2. Instale as dependências:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Inicie o servidor de desenvolvimento:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria uma build de produção
+
+## Estrutura do Projeto
+
+```
+src/
+├── components/       # Componentes reutilizáveis
+├── pages/           # Páginas da aplicação
+│   ├── public/      # Páginas públicas (Login)
+│   ├── home.tsx     # Lista de tarefas
+│   ├── about.tsx    # Página Sobre
+│   └── detail.tsx   # Página de detalhes
+├── shared/          # Código compartilhado
+│   ├── contexts/    # Contextos React
+│   ├── layout/      # Layouts da aplicação
+│   └── services/    # Serviços de API
+└── mocks/           # Mock da API
+```
+
+## Desenvolvimento
+
+O projeto utiliza uma API simulada para desenvolvimento e testes das funcionalidades de CRUD de tarefas.
