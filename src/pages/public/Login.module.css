@@ -53,3 +53,10 @@
 .Button:active {
   background: linear-gradient(90deg, #3a8d5e, #4cb27a);
 }
+
+.ErrorMessage {
+  color: #dc2626;
+  font-size: 12px;
+  align-self: flex-start;
+  padding-left: 30px;
+}
