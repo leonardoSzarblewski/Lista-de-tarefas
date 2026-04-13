@@ -43,15 +43,15 @@
   border-radius: 4px;
   padding-left: 16px;
   padding-right: 16px;
-  background: linear-gradient(90deg, #2e8b57, #3cb371);
+  background: linear-gradient(90deg, #581c87, #7c3aed);
 }
 
 .Button:hover {
-  background: linear-gradient(90deg, #34985f, #43cd81);
+  background: linear-gradient(90deg, #6b21a8, #8b5cf6);
 }
 
 .Button:active {
-  background: linear-gradient(90deg, #3a8d5e, #4cb27a);
+  background: linear-gradient(90deg, #7e22ce, #a78bfa);
 }
 
 .ErrorMessage {

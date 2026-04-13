@@ -28,17 +28,17 @@
   padding-left: 16px;
   padding-right: 16px;
   border-radius: 100px;
-  background-color: rgb(4, 209, 4);
+  background: linear-gradient(90deg, #581c87, #7c3aed);
   font-weight: 600;
 }
 
 .ButtonComplete:hover {
-  background-color: rgb(21, 151, 21);
+  background: linear-gradient(90deg, #6b21a8, #8b5cf6);
   transition: .5s;
 }
 
 .ButtonComplete:active {
-  background-color: rgb(58, 172, 58);
+  background: linear-gradient(90deg, #7e22ce, #a78bfa);
 }
 
 .ButtonRemove {
@@ -50,15 +50,15 @@
   padding-right: 16px;
   border-radius: 100px;
   text-decoration: none;
-  background-color: rgb(255, 0, 0);
+  background: linear-gradient(90deg, #be185d, #ec4899);
   font-weight: 600;
 }
 
 .ButtonRemove:hover {
-  background-color: #ec0404;
+  background: linear-gradient(90deg, #9d174d, #f472b6);
   transition: .5s;
 }
 
 .ButtonRemove:active {
-  background-color: #ff4747;
+  background: linear-gradient(90deg, #831843, #f9a8d4);
 }

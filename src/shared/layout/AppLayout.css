@@ -23,7 +23,7 @@ body,
   justify-content: center;
   gap: 16px;
   padding: 20px 32px;
-  background: linear-gradient(90deg, #2e8b57, #3cb371);
+  background: linear-gradient(90deg, #581c87, #7c3aed);
   color: #fff;
   box-shadow: 0 2px 6px #0000001a;
 }
@@ -43,4 +43,9 @@ body,
 
 .layout-header a:active {
   background-color: #ffffff4d;
+}
+
+.layout-header a.active {
+  background-color: #ffffff33;
+  box-shadow: 0 0 4px #0000001a;
 }
