@@ -20,7 +20,7 @@ body,
 .layout-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 16px;
   padding: 20px 32px;
   background: linear-gradient(90deg, #581c87, #7c3aed);
@@ -48,4 +48,27 @@ body,
 .layout-header a.active {
   background-color: #ffffff33;
   box-shadow: 0 0 4px #0000001a;
+}
+
+.nav-wrapper {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  justify-content: center;
+}
+
+.btn-logout{
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.btn-logout:hover {
+  background-color: #ffffff33;
+  padding: 10px 16px;
+  border-radius: 6px;
 }
