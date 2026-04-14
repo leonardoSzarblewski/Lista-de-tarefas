@@ -16,8 +16,10 @@ export function Home() {
     }, [])
     
    const handleAddInput = (value : string) => {
+      if (!value.trim()) return;
     
-        TodoApi.create({ label: value, complete: false}).then(data => setList([...isList, data]))
+      TodoApi.create({ label: value, complete: false}).then(data => setList([...isList, data]))
+
     }
     
     const handleRemoveButton = (id : string) => {
